@@ -1,0 +1,726 @@
+---
+title: "BSPP_visualisation_démarche"
+author: "t0r3l"
+date: "2024-05-01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#I: Mise en place de l'environnement
+
+Importation des packages:
+```{r}
+library(tidyverse)
+library(hms)
+library(shiny)
+library(leaflet)
+library(leaflet.extras)
+library(sf) 
+library(stringr)
+library(stringi)
+```
+
+
+Importation des données:
+```{r}
+BSPP = read.csv("BSPP.csv")
+```
+
+
+
+#II Analyse et nettoyage du jeu de données:
+
+
+Visualisation du jeu de données:
+```{r}
+View(BSPP)
+```
+
+Les colomnes X à X.3 n'apparaissent pas dans excel et ne contiennent aucune valeur 
+elles semblent donc être duent à l'import dans R.
+
+
+
+
+La fonction colnames permet d'identifier l'index de chaque columne.
+```{r}
+colnames(BSPP)
+```
+
+Nous pouvons désormais sélectionner les columnes utiles:
+```{r}
+BSPP = BSPP[1:9]
+BSPP
+```
+
+Vérifier s'il existe des valeurs manquantes:
+```{r}
+colSums(is.na(BSPP))
+```
+
+Il y en a aucune.
+
+
+Observons la structure du jeu de données
+
+```{r}
+summary(BSPP)
+```
+
+
+##1 Intervention : un id d’intervention (non unique)
+
+```{r}
+length(unique(BSPP$intervention))
+```
+Le jeu de donnée contient 9353 interventions pour 12354 lignes
+
+
+##2 Id_engagement : un id correspondant à une sortie d’engin (unique)
+
+```{r}
+anyDuplicated(BSPP$id_engagement_engin)
+```
+La variable contient apparemment aucun doublon
+
+
+
+##3 Victime : 1 si l’engin a traité au moins une victime lors de son engagement, 0 sinon
+
+```{r}
+BSPP %>% 
+  ggplot(aes(x = victime, fill = categorie)) +
+  geom_bar() +
+  scale_x_continuous(
+    breaks = seq(0, max(BSPP$victime), by = 1)
+  )
+  
+```
+La distribution semble cohérente.
+
+
+
+Observons désormais la distribution du nombre total de victimes prises en charge
+lors des interventions.
+On remarque une moyenne tendant vers 1 et un écart-type d'approximativement 0.39 
+indiquant une faible dispersion des valeurs autour de 1.
+
+```{r}
+victimes = BSPP2 %>%  
+  group_by(intervention) %>% 
+  reframe(intervention, categorie, tot_victimes = sum(victime)) %>% 
+  distinct(intervention, categorie, tot_victimes) %>% 
+  select(intervention, categorie, tot_victimes)
+
+victimes %>% 
+  summarise(min = min(tot_victimes), max = max(tot_victimes), moyenne = mean(tot_victimes), ecart_type = sd(tot_victimes))
+```
+
+
+
+Observons la même variable mais cette fois par categorie
+```{r}
+victimes %>% 
+  group_by(categorie) %>% 
+  summarise(min = min(tot_victimes), max = max(tot_victimes), moyenne = mean(tot_victimes), ecart_type = sd(tot_victimes)) %>% 
+  arrange(-moyenne)
+```
+
+
+On observe que la categorie avec la moyenne et l'écart-type les plus élevés est
+'ACCIDENT'
+
+
+Nous pouvons à travers cette visualisation mieux apréhender la différence des 
+moyennes en fonction de la catégorie.
+```{r}
+victimes %>% 
+  group_by(categorie) %>% 
+  summarise(moyenne_tot_victimes = mean(tot_victimes)) %>% 
+  ggplot(aes(x = categorie, y = moyenne_tot_victimes, fill = categorie)) + 
+  geom_col() +
+  labs(title = 'moyenne de victimes totales par intervention en fonction de la catégorie',
+       y = 'moyenne de victimes')
+```
+
+
+##4 Categorie : le type d’intervention
+
+
+```{r}
+tot_obs = length(unique(BSPP$intervention))
+
+prop = BSPP %>% 
+  distinct(intervention, categorie) %>% 
+  group_by(categorie) %>% 
+  reframe(categorie, somme_interventions = n(), tot_obs) %>% 
+  mutate(proportion = somme_interventions*100/tot_obs) %>% 
+  distinct(categorie, somme_interventions, tot_obs, proportion)  
+prop
+```
+
+
+En comparant notre échantillon avec ['le rapport d'activité BSPP de l'année 2023'](https://pompiersparis.fr/wp-content/uploads/2024/04/Rapport-dactivites-BSPP-2023.pdf), 
+on observe une légère variation mais l'échantillon semble représentatif de notre population
+
+```{r}
+prop %>% 
+  select(categorie, proportion) %>% 
+  mutate(proportion_rapport_2023 = c(5.2, 8.4, 3.1, 83.3)) %>% 
+  summarize(categorie, proportion_échantillon = proportion, proportion_rapport_2023, difference_prop = proportion - proportion_rapport_2023)
+```
+
+
+
+
+##5: Id_engin : le n° de l’engin engagé
+
+
+600 engins différents sont évoqués dans cet échantillon
+```{r}
+length(unique(BSPP$id_engin))
+```
+
+Voici un bref résumé statistique de la distribution du nombre d'engagements d'un 
+engin sur interventions distinctes; la distribution à un rang très.
+```{r}
+BSPP %>% 
+  #un seul engagement par intervention est pris en compte
+  distinct(intervention, id_engin) %>% 
+  group_by(id_engin) %>% 
+  summarize(nbr_engagement_engin = n()) %>% 
+  summary(nbr_engagement_engin) %>% 
+  
+```
+
+cette visualisation de l'usage d'un engin par categorie peut indiquer la spécialisation
+d'engins dans certains type d'interventions comme la présence d'une hétérogénéité
+marquante de la distribution des categories d'incidents par zones géographique 
+d'action.
+
+Une étude sur la varible commune sera donc nécessaire pour mieux comprendre 
+la relation de cette variable avec la variable catégorie.
+
+```{r}
+BSPP %>% 
+  distinct(intervention, id_engin, categorie) %>% 
+  group_by(id_engin) %>% 
+  reframe(nbr_engagement_engin = n(), categorie) %>% 
+  ggplot(aes(x = nbr_engagement_engin, fill = categorie)) +
+  geom_histogram()
+```
+
+
+##6 jour : le jour de la semaine
+
+```{r}
+unique(BSPP$jour)
+```
+il n'y a pas de valeur incohérente
+
+
+Nous pouvons factoriser les jours de manière ordonnée pour faciliter les requêtes
+```{r}
+BSPP <- BSPP %>%
+  mutate(jour = factor(
+    jour, 
+    levels = c("lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"),
+    ordered = TRUE))
+```
+
+
+La distribution du nombre d'interventions par jour semble approximer une loi uniforme.
+Cela nous indique que les jours ont peu d'impact sur le nombre d'interventions 
+indépendemment de leur categorie. Afin de s'en assurer, la réalisation d'un t-test 
+est tout de même à privilégier.
+#########################################################t-test?
+
+```{r}
+BSPP %>% 
+  distinct(intervention, jour, categorie) %>% 
+  ggplot(aes(x=jour, fill = categorie)) +
+  geom_bar()
+```
+
+On remarque ici qu'aucun engagement d'engin d'une même intervention chevauche 
+plusieurs jours
+```{r}
+nrow(BSPP %>% 
+  distinct(intervention, jour) %>% 
+  group_by(intervention) %>% 
+  summarize(intervention_sur_plsrs_j = n_distinct(jour)) %>%
+  filter(intervention_sur_plsrs_j  > 1))
+```
+
+
+
+##7 heure : l’heure d’engagement de l’engin
+
+```{r}
+unique(BSPP$heure)
+```
+Les heures sont représentées par les entiers de 0 à 23
+
+
+
+
+Nous observons ici une inéquité de la répartition des débuts d'engagement sur
+une intervention, ce notament entre les horaires de jour et celles de nuit.
+```{r}
+BSPP %>%
+  group_by(intervention) %>% 
+  slice_min(heure) %>% 
+  distinct(intervention ,heure, categorie) %>% 
+  ggplot(aes(x = heure, fill = categorie)) +
+  geom_bar() +
+  labs(title = ('Distribution de la première heure d\'engagement sur une intervention'))
+```
+
+
+
+##8 duree_engin_sur_intervention : le temps passé par l’engin sur l’intervention lors de son engagement
+
+
+Concentrons nous désormais sur la variable duree_engin_sur_intervention pour 
+vérifier si elle contient de données aberrantes:
+```{r}
+summary(BSPP$duree_engin_sur_intervention)
+```
+La distribution est extrêmement dispersée avec une valeur minimale de 3 et une maximale de      
+166492.
+
+Nous observons ici que les deux durées maximales concernent des incendies ce qui 
+est cohérent.
+
+```{r}
+grandes_durees = BSPP %>% 
+  arrange(-duree_engin_sur_intervention) %>% 
+  select(duree_engin_sur_intervention, categorie, commune)
+grandes_durees
+```
+
+
+Le rang entre la valeur maximale et la deuxième valeur maximale est de 73178. 
+C'est une valeur possible bien qu'extrême. La médiane est donc l'indicateur 
+de tendence à privilégier sur la moyenne. 
+
+```{r}
+grandes_durees$duree_engin_sur_intervention[1] - grandes_durees$duree_engin_sur_intervention[2]
+```
+
+
+La médiane est de 3588 signifiant que la distribution est equivalamment répartie
+à droite et à gauche de 3588.
+
+Nous pouvons observer que la distribution est plus dense entre 0 et 10000.
+
+```{r}
+BSPP %>% 
+  ggplot(aes(x = duree_engin_sur_intervention, fill = categorie)) +
+  geom_histogram() +
+  labs(
+    title = 'Durée engin sur intervention et proportion de la catégorie de l\'intervention ',
+    y = 'Occurence'
+  ) +
+  scale_x_continuous(
+    breaks = seq(0, max(BSPP$duree_engin_sur_intervention), by = 20000)
+  ) 
+```
+
+
+
+D'après ['le rapport d'activité BSPP de l'année 2023'](https://pompiersparis.fr/wp-content/uploads/2024/04/Rapport-dactivites-BSPP-2023.pdf)
+(page 41) on observe que la durée moyenne d'intervention sur un incendie est de 
+76 minutes.
+
+
+Lorsque l'on divise la médiane de la duree de deploiement d'un engin sur intervention 
+par 60 on trouve approximativement la valeur 85	qui correspond au même ordre de grandeur.
+L'on peut donc en déduire que l'unité employée pour quantifier cette variable est
+la seconde.
+
+```{r}
+BSPP %>% 
+  filter(categorie == 'INCENDIE') %>% 
+  summarize('Temps median de durée d\'engagement d\'un engin en minute' = median(duree_engin_sur_intervention)/60)
+```
+
+
+
+Afin d'améliorer la lisibilité de notre variable convertissons la au format hms
+(heure, minute, seconde) pour nos futures visualisation  ainsi qu'au format minutes 
+pour continuer nos recherches 
+
+```{r}
+BSPP = BSPP %>% 
+  mutate(
+    duree_engin_hms = as_hms(duree_engin_sur_intervention),
+    duree_engin_min = duree_engin_sur_intervention/60
+    )
+```
+
+
+
+
+Observons désormais la partie gauche de nos valeurs
+```{r}
+BSPP %>% 
+  filter(duree_engin_min<200) %>% 
+  ggplot(aes(x = duree_engin_min, fill = categorie)) +
+  geom_histogram() +
+  labs(
+    title = 'Durée engin sur intervention inférieure à 200 minutes \nen fonction proportion de la catégorie de l\'intervention',
+    y = 'Occurence'
+  ) +
+ scale_x_continuous(
+    breaks = seq(0, max(BSPP$duree_engin_min), by = 50)
+  ) +
+  theme(axis.text.x = element_text(angle = 45)) 
+```
+La distribution y est bimodale avec un nombre étonnement élevé de valeurs 
+extrêment basses.
+
+
+
+
+578 valeurs se trouvent en effet sous le seuil des 30s même dans le cas ou cette 
+durée d'engagement ne concernerait que la présence de l'engin sur le lieu de 
+l'intervention, elle paraît invraisemblable.
+```{r}
+nrow(BSPP %>% 
+  select(duree_engin_min) %>% 
+  filter(duree_engin_min < 0.5))
+```
+
+
+
+Nous allons donc considérer les données inférieures à 0.5(30/60) comme des valeurs 
+aberrantes et les winsorizer par la médiane de notre jeu de données.
+
+
+```{r}
+med1 = median(BSPP$duree_engin_min)
+med2 = as_hms(med1*60)
+
+BSPP2 = BSPP %>% 
+  mutate(
+    duree_engin_min = case_when(duree_engin_min < 0.5 ~  med1,
+                                .default = duree_engin_min), 
+    duree_engin_hms = case_when(duree_engin_hms < as_hms(30) ~ med2,
+                                .default =duree_engin_hms)
+  ) %>% 
+  select(-duree_engin_sur_intervention)
+
+```
+
+
+```{r}
+BSPP2 %>%
+  select(duree_engin_hms, duree_engin_min) %>% 
+  arrange(duree_engin_hms)
+```
+```{r}
+BSPP2$duree_engin_min = round(BSPP2$duree_engin_min, 2)
+```
+
+
+```{r}
+min(BSPP2$duree_engin_min)
+```
+
+Sauvegarde du jeu de donné traité
+
+```{r}
+write.csv(BSPP2, file = "C:/Users/morel/Documents/Library/CodingTime/R/BSPP/BSPP2.CSV")
+```
+
+
+
+
+##9 Commune : la commune où a eu lieu l’intervention
+
+
+Pour visualiser au mieux les autres variables par rapport à des données géographiques, la création d'une heatmap semble être la plus appropriée.
+
+Afin de réaliser ces visualisations, nous allons employer la bibliothèque leaflet.
+
+Pour cette visualisation j'ai trouvé les coordonnées des délimitations des arrondissements sur ['le site opendata.paris.fr'](https://opendata.paris.fr/explore/dataset/arrondissements/export/?disjunctive.c_ar&disjunctive.c_arinsee&disjunctive.l_ar) 
+et celles des communes via l'['API découpage administratif'](https://guides.etalab.gouv.fr/apis-geo/2-api-decoupage-administratif.html#les-sources-alternatives-pour-les-communes)
+
+
+L'API découpage administratif permet de récupérer les coordonnées des communes 
+souhaitées par le découpage territorial choisi.
+
+L'action de la BSPP se restreignant à ['Paris et sa petite couronne'](https://pompiersparis.fr/historique/la-brigade/), le découpage
+choisi pour récupérer les coordonnées à donc été celui départementale car un découpage régional augmenterait les risques d'homonymie entre les communes.
+
+
+Cependant la documentation trouvée ne stipulait pas comment faire la requête de plusieurs départements, la stratégie de la 
+création de plusieurs jeux de données qui seront ensuite concaténés a donc été choisi.
+
+
+Ainsi la requête https://geo.api.gouv.fr/communes?&format=geojson&geometry=contour&codeDepartement=92 a permis de constituer le jeu de données hauts_de_seine.json
+
+La requête https://geo.api.gouv.fr/communes?&format=geojson&geometry=contour&codeDepartement=93 a permis de constituer le jeu de données seine_saint_denis.json
+
+Enfin la requête https://geo.api.gouv.fr/communes?&format=geojson&geometry=contour&codeDepartement=94 a permis de constituer le jeu de données val_de_marne.json 
+
+```{r}
+hauts_de_seine = st_read("C:/Users/morel/Documents/Library/CodingTime/R/BSPP/maping/hauts_de_seine.json")
+seine_saint_denis = st_read("C:/Users/morel/Documents/Library/CodingTime/R/BSPP/maping/seine_saint_denis.json")
+val_de_marne = st_read("C:/Users/morel/Documents/Library/CodingTime/R/BSPP/maping/val_de_marne.json")
+```
+
+
+Formatage pour matcher les coordonnées avec les communes de BSPP
+```{r}
+communes =  rbind(hauts_de_seine, seine_saint_denis, val_de_marne)
+communes = communes %>% 
+  mutate(nom = stri_trans_general(nom, "Latin-ASCII"),
+         nom = str_to_upper(nom),
+         commune = nom) %>% 
+  select(commune, geometry) 
+```
+
+
+
+Formatage pour matcher les coordonnées avec communes
+```{r}
+arrondissements = st_read("C:/Users/morel/Documents/Library/CodingTime/R/BSPP/maping/arrondissements.geojson")
+arrondissements = arrondissements %>% 
+  mutate(commune = l_ar) %>% 
+  select(commune, geometry)
+```
+
+
+Concaténation des jeux de données
+```{r}
+coordonnees = rbind(communes, arrondissements)
+```
+
+
+Formatage pour matcher les arrondissements de BSPP avec leurs coordonnées
+```{r}
+BSPP = BSPP %>%
+  mutate(commune = str_replace(commune, "\\d+EME ARRONDISSEMENT", str_extract(commune, "\\d+") %>%  paste( "ème Ardt", sep = "")),
+         commune = str_replace(commune, "1ER ARRONDISSEMENT", "1er Ardt"))
+```
+
+
+Formatage pour matcher les communes de BSPP avec leurs coordonnées
+```{r}
+reg1 = "\\s\\(L'\\)"
+reg2 = "\\s\\(.*\\)"
+
+BSPP = BSPP %>% 
+  mutate(commune = 
+    case_when(
+    str_detect(commune, reg1)  ~ "L'" %>% paste(str_remove(commune, reg1), sep = ''),
+    str_detect(commune, reg2)  ~ str_remove_all(str_extract(commune, reg2), "\\s|\\(|\\)") %>% paste(str_remove(commune, reg2), sep = ' '),
+    TRUE ~ commune))
+```
+
+
+Nous allons désormais joindre les communes unique de BSPP avec les coordonnées
+afin de déterminer les données sont liées correctement ainsi que pour créer une carte
+lisible.
+
+```{r}
+distinct_commune_BSPP = BSPP %>% 
+  distinct(commune) %>% 
+  select(commune)
+
+coordonnees_commune_inner = inner_join(coordonnees, distinct_commune_BSPP, by = "commune") 
+
+print("Nombre de communes sans correspondances:" %>%  paste(nrow(distinct_commune_BSPP) - nrow(coordonnees_commune_inner)), sep =' ')
+```
+
+
+Lors d'un left join, si la clef d'idenfication du jeu de données de gauche
+ne trouve pas de correspondance dans le jeu de données de droite, elle sera tout 
+de même présente dans la df finale et vera les valeurs de la columne de droite
+comme manquantes (NA).
+
+Cepandant la df de droite est de class "data.frame"
+mais aussi "sf". Les valeurs manquantes prennent donc une valeur différente.
+
+Afin de déterminer ces valeurs manquantes nous allons donc employer la fonction 
+duplicated permettant de trouver les doublons dans une variable.
+Les coordonnées étant des valeurs uniques, seules les valeurs manquantes peuvent
+avoir la même valeur.
+
+```{r}
+#left_join
+coordonnees_commune_BSPP = left_join(distinct_commune_BSPP, coordonnees, by = "commune")
+
+#valeurs manquantes
+communes_ss_correspondance = coordonnees_commune_BSPP %>% 
+  filter(duplicated(geometry)|duplicated(geometry, fromLast = TRUE)) 
+communes_ss_correspondance$commune
+```
+
+
+Nous avons 7 communes sans correspondance, ceci est soit à une erreur de format 
+comme dans le cas de SAINT-OUEN, soit à l'existence d'interventions
+dans des départements hors petite couronne dans les autres cas ou en encore
+les deux pour le cas de LE-MESNIL-AMELOT .
+
+Commençons par traiter les erreur de format.
+```{r}
+BSPP = BSPP %>% 
+  mutate(commune = case_when(
+    #L'indentation entre le tilde et la varialble est obligatoire
+    commune == 'LE-MESNIL-AMELOT' ~ 'LE MESNIL-AMELOT',
+    commune == 'SAINT-OUEN' ~ 'SAINT-OUEN-SUR-SEINE',
+    TRUE ~ commune
+  ))
+
+distinct_commune_BSPP = BSPP %>% 
+  distinct(commune) %>% 
+  select(commune)
+
+coordonnees_commune_inner = inner_join(coordonnees, distinct_commune_BSPP, by = "commune") 
+print("Nombre de communes sans correspondances:" %>%  paste(nrow(distinct_commune_BSPP) - nrow(coordonnees_commune_inner)), sep =' ')
+```
+
+
+
+Pour récupérer les données des communes restantes, nous allons devoir faire la requête d'un nouveau jeu de données 
+mais cette fois par le découpage départementale Île-de-France tel que:
+https://geo.api.gouv.fr/communes?codeRegion=11&format=geojson&geometry=contour
+
+```{r}
+ile_de_france = st_read("C:/Users/morel/Documents/Library/CodingTime/R/BSPP/maping/ile_de_france.json")
+
+ile_de_france = ile_de_france %>% 
+  mutate(nom = stri_trans_general(nom, "Latin-ASCII"),
+         nom = str_to_upper(nom),
+         commune = nom) %>% 
+  select(commune, geometry) 
+```
+Création du jeu de données contenant les coordonnées manquantes 
+
+```{r}
+#réinitialisation des valeurs manquantes
+#left_join 
+coordonnees_commune_BSPP = left_join(distinct_commune_BSPP, coordonnees, by = "commune")
+
+#valeurs manquantes
+communes_ss_correspondance = coordonnees_commune_BSPP %>% 
+  filter(duplicated(geometry)|duplicated(geometry, fromLast = TRUE)) 
+communes_ss_correspondance$commune
+
+#filtre ile_de_france 
+ile2france = ile_de_france %>% 
+  filter(commune %in% communes_ss_correspondance$commune)
+
+#concaténation avec coordonnées de la petite couronne
+
+coordonnees = rbind(coordonnees, ile2france)
+```
+
+Nous pouvons désormais compléter nos données
+
+```{r}
+coordonnees_commune_inner = inner_join(coordonnees, distinct_commune_BSPP, by = "commune") 
+print('valeurs correspondantes:' %>% paste(nrow(coordonnees_commune_inner), sep = ' '))
+```
+
+
+
+```{r}
+#View(maping)
+leaflet() %>%
+  # Ajouter des données GeoJSON
+  addProviderTiles("OpenStreetMap.Mapnik") %>%
+  addPolygons(data = coordonnees_commune_inner,
+              #fillColor = "red",  # Couleur de remplissage
+              #fillOpacity = 0.5,  # Opacité de remplissage
+              weight = 0.5,       # Épaisseur de la ligne
+              color = "black")    # Couleur de la ligne
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#IV Tests de relations
+
+Importation du jeu de données traité
+
+```{r}
+BSPP2 = read.csv("C:/Users/morel/Documents/Library/CodingTime/R/BSPP/BSPP2.CSV")
+```
+
+
+
+
+
+
+de savoir si les facteurs géographiques temporels et catégoriels ont un lien
+avec le nombre d'interventions et leur ampleur.
+
+Il serait aussi interressant de savoir si l'occurence des catégorie est dépendante
+des facteurs spatios temporels
+
+Les variables indépendantes d'ordres spatio-temporel sont les variables commune,
+jour et heure.
+La variable indiquant la categorie est la variable 'categorie'.
+Les variables dépe d'ampleur seraient le nombre d'engins déployés sur une intervention,
+'duree_engin_min' le temps qu'un engin a passé sur un lieu d'intervention au format 
+minutes, ainsi que le nombre de victimes prises en charge sur une intervention.
+
+
+
+va indépendantes:                   va dépendantes:
+
+commune                             nombre d'intervention
+
+jour                                mediane duree_engin_min
+
+première heure d'engagement         somme des victimes prises en charge 
+sur une intervention                au sein d'une intervention
+
+categorie                           nombre d'engagements sur l'intervention 
+
+                                   
+
+
+va indépendantes et dépendantes:
+
+première heure d'engagement
+
+sur une intervention
+
+commune
+
+categorie
+
+
+
+
+
+
+

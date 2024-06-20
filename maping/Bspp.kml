@@ -1,0 +1,1569 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+        <Folder>
+            <name>Bspp</name>
+            <Style id="bspp">
+                <IconStyle>
+                    <Icon>
+                        <href>/cartes/ressources/img/pompier.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Schema name="Bspp" id="Bspp">
+                <SimpleField name="Name" type="string"></SimpleField>
+                <SimpleField name="Description" type="string"></SimpleField>
+                <SimpleField name="CS" type="string"></SimpleField>
+                <SimpleField name="DENO_CS" type="string"></SimpleField>
+                <SimpleField name="GRPT" type="int"></SimpleField>
+                <SimpleField name="CIE" type="int"></SimpleField>
+                <SimpleField name="TEL_VILLE" type="string"></SimpleField>
+                <SimpleField name="TEL_FEU" type="string"></SimpleField>
+                <SimpleField name="TEL_AUTO" type="string"></SimpleField>
+                <SimpleField name="ADRESSE" type="string"></SimpleField>
+                <SimpleField name="PC_CIE" type="string"></SimpleField>
+                <SimpleField name="EM_GRPT" type="string"></SimpleField>
+            </Schema>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">MONN</SimpleData>
+                        <SimpleData name="DENO_CS">LA MONNAIE</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">4</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 43 54 64 36</SimpleData>
+                        <SimpleData name="TEL_FEU">01 43 54 89 10</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 041</SimpleData>
+                        <SimpleData name="ADRESSE">Face 11 quai Conti 75006 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.340159486521991,48.857098343461679</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">BLAN</SimpleData>
+                        <SimpleData name="DENO_CS">BLANCHE</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">7</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 40 23 20 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 74 56 20</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 070</SimpleData>
+                        <SimpleData name="ADRESSE">28 rue Blanche 75009 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.332714097910268,48.878574515284825</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">TREM</SimpleData>
+                        <SimpleData name="DENO_CS">TREMBLAY-EN-FRANCE</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">13</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 48 60 61 10</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 60 69 48</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 133</SimpleData>
+                        <SimpleData name="ADRESSE">Sn chemin des Vaches 93290 Tremblay</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.569698732484958,48.965712528994253</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">LIVR</SimpleData>
+                        <SimpleData name="DENO_CS">LIVRY-GARGAN</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">14</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 43 83 58 26</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 83 56 40</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 142</SimpleData>
+                        <SimpleData name="ADRESSE">43 ave Voltaire 93190 Livry-Gargan</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.54744213526183,48.930659471799352</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">CLIC</SimpleData>
+                        <SimpleData name="DENO_CS">CLICHY-SOUS-BOIS</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">14</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 09 40 10</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 09 40 00</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 140</SimpleData>
+                        <SimpleData name="ADRESSE">2 al du Chne Pointu 93390 Clichy/Bois</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.542777955351749,48.904823354490865</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">NEUI</SimpleData>
+                        <SimpleData name="DENO_CS">NEUILLY-SUR-MARNE</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">24</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 43 08 14 34</SimpleData>
+                        <SimpleData name="TEL_FEU">01 43 08 09 41</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 241</SimpleData>
+                        <SimpleData name="ADRESSE">9 ave du Perche 93330 Neuilly/Marne</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.523911983990014,48.853205173601452</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">MTRL</SimpleData>
+                        <SimpleData name="DENO_CS">MONTREUIL</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">24</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 42 87 20 31</SimpleData>
+                        <SimpleData name="TEL_FEU">01 42 87 00 02</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 240</SimpleData>
+                        <SimpleData name="ADRESSE">11 ave Pasteur 93105 Montreuil/Bois</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.439918544329441,48.864065759881719</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">BOND</SimpleData>
+                        <SimpleData name="DENO_CS">BONDY</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">14</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 41 55 54 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 47 01 33</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 141</SimpleData>
+                        <SimpleData name="ADRESSE">6-8 ave de Verdun 93140 Bondy</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.490545080160129,48.905169681219505</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">PIER</SimpleData>
+                        <SimpleData name="DENO_CS">PIERREFITTE</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">26</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 49 71 54 08</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 26 43 65</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 263</SimpleData>
+                        <SimpleData name="ADRESSE">3-5 rue Etienne Dollet 93380 Pierrefitte</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.366756980717588,48.965993796942357</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">AULN</SimpleData>
+                        <SimpleData name="DENO_CS">AULNAY-SOUS-BOIS</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">13</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 43 83 53 33</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 83 76 28</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 130</SimpleData>
+                        <SimpleData name="ADRESSE">156 rte de Mitry 93600 Aulnay</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.514659717163093,48.948144773485424</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">BLME</SimpleData>
+                        <SimpleData name="DENO_CS">BLANC MENIL</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">13</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 48 67 42 89</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 67 32 80</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 131</SimpleData>
+                        <SimpleData name="ADRESSE">76 ave Aristide Briand 93150 Blanc-Mesnil</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.444483496889551,48.943266183727907</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">DRAN</SimpleData>
+                        <SimpleData name="DENO_CS">DRANCY</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">13</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 48 32 02 64</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 32 02 63</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 132</SimpleData>
+                        <SimpleData name="ADRESSE">19-21 rue Roger Salengro 93700 Drancy</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.440845316399005,48.920457078029237</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">LACO</SimpleData>
+                        <SimpleData name="DENO_CS">LA COURNEUVE</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">26</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 48 36 32 64</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 36 32 61</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 262</SimpleData>
+                        <SimpleData name="ADRESSE">24 rue de la Convention 93120 La Courneuve</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.388892543404733,48.928708449650507</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">PANT</SimpleData>
+                        <SimpleData name="DENO_CS">PANTIN</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">10</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 48 45 60 41</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 45 06 37</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 102</SimpleData>
+                        <SimpleData name="ADRESSE">93-95 rue du Cartier Bresson 93500 Pantin</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.408006343064411,48.899215162303641</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">AUBE</SimpleData>
+                        <SimpleData name="DENO_CS">AUBERVILLIERS</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">26</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 48 33 72 11</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 52 03 42</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 261</SimpleData>
+                        <SimpleData name="ADRESSE">47-49 rue de la commune de Paris 93300 Aubervilliers</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.381437589310886,48.910924395514463</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">STDE</SimpleData>
+                        <SimpleData name="DENO_CS">SAINT DENIS</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">26</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 48 13 85 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 13 85 18</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 260</SimpleData>
+                        <SimpleData name="ADRESSE">Fort de la Briche Che du Fort de la Briche 93200 Saint-Denis</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.341357710728712,48.945207840648017</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">STOU</SimpleData>
+                        <SimpleData name="DENO_CS">SAINT OUEN</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">9</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 41 66 49 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 40 11 12 56</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 093</SimpleData>
+                        <SimpleData name="ADRESSE">89 rue du Dc Bauer 93400 Saint-Ouen</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.341529168754316,48.908221630426802</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">GENN</SimpleData>
+                        <SimpleData name="DENO_CS">GENNEVILLIERS</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">27</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 47 94 18 14</SimpleData>
+                        <SimpleData name="TEL_FEU">01 47 94 38 94</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 270</SimpleData>
+                        <SimpleData name="ADRESSE">136-140 rue Henri Barbusse 92230 Gennevilliers</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.302037083519133,48.929861001606383</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">ASNI</SimpleData>
+                        <SimpleData name="DENO_CS">ASNIERES</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">27</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 47 99 71 19</SimpleData>
+                        <SimpleData name="TEL_FEU">01 47 99 05 01</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 271</SimpleData>
+                        <SimpleData name="ADRESSE">4 rue du Cne Bossard 92600 Asnires</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.285136680353378,48.923757073502784</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">COBE</SimpleData>
+                        <SimpleData name="DENO_CS">COLOMBES</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">27</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 42 42 00 63</SimpleData>
+                        <SimpleData name="TEL_FEU">01 42 42 14 56</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 272</SimpleData>
+                        <SimpleData name="ADRESSE">20 rue Hoche 92700 Colombes</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.262550581629367,48.92275821023366</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">MALA</SimpleData>
+                        <SimpleData name="DENO_CS">MALAR</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">4</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 55 08 81</SimpleData>
+                        <SimpleData name="TEL_FEU">01 47 05 41 99</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 042</SimpleData>
+                        <SimpleData name="ADRESSE">7 rue Malar 75007 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.306601910761879,48.861602580590059</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">BITC</SimpleData>
+                        <SimpleData name="DENO_CS">BITCHE</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">10</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 44 65 94 48</SimpleData>
+                        <SimpleData name="TEL_FEU">01 40 36 86 03</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 101</SimpleData>
+                        <SimpleData name="ADRESSE">2 place Bitche 75019 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.380602310309143,48.889215276407739</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">LAND</SimpleData>
+                        <SimpleData name="DENO_CS">LANDON</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">10</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 40 35 58 31</SimpleData>
+                        <SimpleData name="TEL_FEU">01 40 35 74 58</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 100</SimpleData>
+                        <SimpleData name="ADRESSE">QUAI DE VALMY</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.369314659140173,48.881666303571059</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">MTMA</SimpleData>
+                        <SimpleData name="DENO_CS">MONTMARTRE</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">9</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 42 26 83 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 46 27 35 55</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 090</SimpleData>
+                        <SimpleData name="ADRESSE">12 rue Carpeaux 75018 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">1</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.333407251299099,48.891143583527992</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">BSLT</SimpleData>
+                        <SimpleData name="DENO_CS">BOURSAULT</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">9</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 22 43 13</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 22 36 77</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 091</SimpleData>
+                        <SimpleData name="ADRESSE">27 rue Boursault 75017 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.320294679767514,48.884015624790358</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">DAUP</SimpleData>
+                        <SimpleData name="DENO_CS">DAUPHINE</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">5</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 53 84 68</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 53 80 11</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 051</SimpleData>
+                        <SimpleData name="ADRESSE">8 rue Mnil 75016 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.284839892485231,48.868540757995369</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">AUTE</SimpleData>
+                        <SimpleData name="DENO_CS">AUTEUIL</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">6</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 42 88 76 20</SimpleData>
+                        <SimpleData name="TEL_FEU">01 42 88 51 81</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 061</SimpleData>
+                        <SimpleData name="ADRESSE">2-4 rue Franois Millet 75016 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.273813082223948,48.850783723488995</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">MENI</SimpleData>
+                        <SimpleData name="DENO_CS">MENILMONTANT</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">12</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 40 31 44 18</SimpleData>
+                        <SimpleData name="TEL_FEU">01 40 31 72 47</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 120</SimpleData>
+                        <SimpleData name="ADRESSE">47 rue St-Fargeau 75020 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.404627087742368,48.871932026102066</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">CHAR</SimpleData>
+                        <SimpleData name="DENO_CS">CHARONNE</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">12</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 43 71 51 22</SimpleData>
+                        <SimpleData name="TEL_FEU">01 43 71 53 66</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 121</SimpleData>
+                        <SimpleData name="ADRESSE">93 rue des Pyrnes 75020 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.405958787829583,48.854808917934712</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">PARM</SimpleData>
+                        <SimpleData name="DENO_CS">PARMENTIER</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">11</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 43 57 27 43</SimpleData>
+                        <SimpleData name="TEL_FEU">01 43 57 58 69</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 111</SimpleData>
+                        <SimpleData name="ADRESSE">87 ave Parmentier 75011 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.37453722054566,48.865905179372795</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">CHTO</SimpleData>
+                        <SimpleData name="DENO_CS">CHATEAU D'EAU</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">8</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 40 03 98 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 40 40 03 33</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 081</SimpleData>
+                        <SimpleData name="ADRESSE">50 rue de Chteau-d'Eau 75010 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.359252918894503,48.871391307079577</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">CHLY</SimpleData>
+                        <SimpleData name="DENO_CS">CHALIGNY</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">1</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 43 72 55 75</SimpleData>
+                        <SimpleData name="TEL_FEU">01 43 72 51 52</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 010</SimpleData>
+                        <SimpleData name="ADRESSE">26 rue de Chaligny 75012 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.385201524267124,48.847530005066872</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">GREN</SimpleData>
+                        <SimpleData name="DENO_CS">GRENELLE</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">6</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 78 77 07</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 78 74 52</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 060</SimpleData>
+                        <SimpleData name="ADRESSE">6 place Violet 75015 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.290916294992508,48.844224577214568</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">PLAI</SimpleData>
+                        <SimpleData name="DENO_CS">PLAISANCE</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">3</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 43 51 77</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 43 00 51</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 032</SimpleData>
+                        <SimpleData name="ADRESSE">45 ave Villemin 75014 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.318631985254099,48.831211326044638</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">PROY</SimpleData>
+                        <SimpleData name="DENO_CS">PORT ROYAL</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">3</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 53 55 23 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 35 18 18</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 030</SimpleData>
+                        <SimpleData name="ADRESSE">55 bld de Port-Royal 75013 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.344709020663138,48.837544199887354</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">CHPT</SimpleData>
+                        <SimpleData name="DENO_CS">CHAMPERRET</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">5</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 72 41 36</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 72 30 65</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 050</SimpleData>
+                        <SimpleData name="ADRESSE">3 bld de l'Yser 75017 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.289038959646762,48.884938826726128</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">POIS</SimpleData>
+                        <SimpleData name="DENO_CS">POISSY</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">2</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 43 54 26 15</SimpleData>
+                        <SimpleData name="TEL_FEU">01 43 54 41 64</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 022</SimpleData>
+                        <SimpleData name="ADRESSE">48-50 rue Cardinal Lemoine 75005 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.35193085885444,48.846622208137525</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">COBI</SimpleData>
+                        <SimpleData name="DENO_CS">COLOMBIER</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">4</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 48 50 70</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 48 32 90</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 040</SimpleData>
+                        <SimpleData name="ADRESSE">11 rue du Vieux Colombier 75006 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.332187723386729,48.851129358491775</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">ROUS</SimpleData>
+                        <SimpleData name="DENO_CS">ROUSSEAU</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">8</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 42 36 55 49</SimpleData>
+                        <SimpleData name="TEL_FEU">01 42 36 60 03</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 080</SimpleData>
+                        <SimpleData name="ADRESSE">21 rue du Jour 75001 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.3453483803394,48.864316353088732</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">SEVI</SimpleData>
+                        <SimpleData name="DENO_CS">SEVIGNE</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">11</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 44 61 50 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 42 72 17 84</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 110</SimpleData>
+                        <SimpleData name="ADRESSE">7 rue de Svign 75004 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.362614560838626,48.855984196122243</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">STHO</SimpleData>
+                        <SimpleData name="DENO_CS">SAINT HONORE</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">7</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 42 61 03 26</SimpleData>
+                        <SimpleData name="TEL_FEU">01 42 61 03 93</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 071</SimpleData>
+                        <SimpleData name="ADRESSE">10 rue St-Anne 75001 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.336208772389743,48.865826419251185</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">LEVA</SimpleData>
+                        <SimpleData name="DENO_CS">LEVALLOIS-PERRET</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">5</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 47 58 51 16</SimpleData>
+                        <SimpleData name="TEL_FEU">01 47 58 51 14</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 052</SimpleData>
+                        <SimpleData name="ADRESSE">1 Avenue Georges Pompidou Leva</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.278306577203987,48.897549966986119</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">CBVE</SimpleData>
+                        <SimpleData name="DENO_CS">COURBEVOIE-LA-DEFENSE</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">28</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 49 04 74 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 43 33 01 20</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 281</SimpleData>
+                        <SimpleData name="ADRESSE">12-14 rue Henri Rgnault 92400 Courbevoie</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">1</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.245004856990168,48.892750149379495</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">NANT</SimpleData>
+                        <SimpleData name="DENO_CS">NANTERRE</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">28</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 41 91 54 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 47 21 23 79</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 282</SimpleData>
+                        <SimpleData name="ADRESSE">8 RUE DE L INDUSTRIE</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.202605676993568,48.899786457806869</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">RUEI</SimpleData>
+                        <SimpleData name="DENO_CS">RUEIL-MALMAISON</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">28</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 47 49 47 09</SimpleData>
+                        <SimpleData name="TEL_FEU">01 47 49 18 18</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 283</SimpleData>
+                        <SimpleData name="ADRESSE">112 rte de l'Empereur 92500 Rueil-Malmaison</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.179383111281644,48.865006403203083</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">GARC</SimpleData>
+                        <SimpleData name="DENO_CS">GARCHE</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">16</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 47 41 21 37</SimpleData>
+                        <SimpleData name="TEL_FEU">01 47 41 05 36</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 161</SimpleData>
+                        <SimpleData name="ADRESSE">18 rue des Jardins 92380 Garches</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.195546164699787,48.844883182679922</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">STCL</SimpleData>
+                        <SimpleData name="DENO_CS">SAINT CLOUD</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">16</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 55 39 39 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 47 71 05 20</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 163</SimpleData>
+                        <SimpleData name="ADRESSE">40 ave du Marchal Foch 92210 St-Cloud</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.210943583533491,48.847773102384117</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">SEVR</SimpleData>
+                        <SimpleData name="DENO_CS">SEVRES</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">16</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 34 05 79</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 34 08 71</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 164</SimpleData>
+                        <SimpleData name="ADRESSE">15 rue de Frville le vingt 92310 Svres</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.206105429333764,48.823637989861076</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">MEUD</SimpleData>
+                        <SimpleData name="DENO_CS">MEUDON</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">16</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 34 02 86</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 34 16 06</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 162</SimpleData>
+                        <SimpleData name="ADRESSE">5 rue Charles Liot 92190 Meudon</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.237677971289943,48.811135715783394</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">BOUL</SimpleData>
+                        <SimpleData name="DENO_CS">BOULOGNE</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">16</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 46 21 01 15</SimpleData>
+                        <SimpleData name="TEL_FEU">01 46 05 12 86</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 160</SimpleData>
+                        <SimpleData name="ADRESSE">55-57 rue Gallini 92100 Boulogne</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.24847691505129,48.837456804519512</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">ISSY</SimpleData>
+                        <SimpleData name="DENO_CS">ISSY-LES-MOULINEAUX</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">6</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 46 42 04 04</SimpleData>
+                        <SimpleData name="TEL_FEU">01 46 42 33 24</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 062</SimpleData>
+                        <SimpleData name="ADRESSE">75 bld Gallini 92130 Issy-les-Moulineaux</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.268886894238194,48.823976595861488</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">CLAM</SimpleData>
+                        <SimpleData name="DENO_CS">CLAMART</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">21</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 41 09 75 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 46 41 02 86</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 213</SimpleData>
+                        <SimpleData name="ADRESSE">234 ave Victor Hugo 92140 Clamart</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.273647526593529,48.811851493453766</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">PLCL</SimpleData>
+                        <SimpleData name="DENO_CS">PLESSIS-CLAMART</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">21</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 46 32 06 76</SimpleData>
+                        <SimpleData name="TEL_FEU">01 46 31 18 18</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 210</SimpleData>
+                        <SimpleData name="ADRESSE">287 ave du Gnral de Gaulle 92140 Clamart</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.251883022203497,48.785191469716246</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">MTGE</SimpleData>
+                        <SimpleData name="DENO_CS">MONTROUGE</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">3</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 58 07 05 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 46 56 18 18</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 031</SimpleData>
+                        <SimpleData name="ADRESSE">53 rue de la Vanne 92120 Montrouge</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.328873309265325,48.813049153562275</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">BGLR</SimpleData>
+                        <SimpleData name="DENO_CS">BOURG-LA-REINE</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">21</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 46 63 09 48</SimpleData>
+                        <SimpleData name="TEL_FEU">01 47 02 09 38</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 212</SimpleData>
+                        <SimpleData name="ADRESSE">20 rue Ravon 92340 Bourg-la-Reine</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.31996118001607,48.778977003956427</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">ANTO</SimpleData>
+                        <SimpleData name="DENO_CS">ANTONY</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">21</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 46 66 09 90</SimpleData>
+                        <SimpleData name="TEL_FEU">01 46 66 07 51</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 211</SimpleData>
+                        <SimpleData name="ADRESSE">2 ave Armand Guillebeaud 92160 Antony</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.305119351207371,48.749113914184491</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">VIMB</SimpleData>
+                        <SimpleData name="DENO_CS">VILLEMOMBLE</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">24</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 28 73 06</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 28 73 05</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 242</SimpleData>
+                        <SimpleData name="ADRESSE">1 rue des Haies 93250 Villemomble</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.498423428518257,48.881976499158043</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">NOIS</SimpleData>
+                        <SimpleData name="DENO_CS">NOISY-LE-GRAND</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">15</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 43 04 22 10</SimpleData>
+                        <SimpleData name="TEL_FEU">01 43 04 20 18</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 152</SimpleData>
+                        <SimpleData name="ADRESSE">1-5 ave Mdric 93160 Noisy-le-Grand</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.559472215848344,48.830265818144703</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">IVRY</SimpleData>
+                        <SimpleData name="DENO_CS">IVRY</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">2</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 46 72 64 34</SimpleData>
+                        <SimpleData name="TEL_FEU">01 46 72 31 54</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 021</SimpleData>
+                        <SimpleData name="ADRESSE">1 place de l'Htel de Ville 94200 Ivry</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.388573872258665,48.811613770997639</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">NATI</SimpleData>
+                        <SimpleData name="DENO_CS">NATIVITE</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">1</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 43 43 54 65</SimpleData>
+                        <SimpleData name="TEL_FEU">01 43 43 53 75</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 011</SimpleData>
+                        <SimpleData name="ADRESSE">5 place Lachambaudie 75012 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.387350278591604,48.836483926515974</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">MASS</SimpleData>
+                        <SimpleData name="DENO_CS">MASSENA</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">2</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 83 82 66</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 83 80 80</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 020</SimpleData>
+                        <SimpleData name="ADRESSE">37 bld Massna 75013 Paris</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">1</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.37439160078957,48.822374923936579</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">VINC</SimpleData>
+                        <SimpleData name="DENO_CS">VINCENNES</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">1</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 58 64 13 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 43 28 04 86</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 012</SimpleData>
+                        <SimpleData name="ADRESSE">2 rue de l'Eglise 94300 Vincennes</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.452859770553888,48.846662577353896</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">NOGT</SimpleData>
+                        <SimpleData name="DENO_CS">NOGENT-SUR-MARNE</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">15</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 55 85 15 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 73 07 58</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 151</SimpleData>
+                        <SimpleData name="ADRESSE">Bld de Strasbourg 94130 Nogent/Marne</SimpleData>
+                        <SimpleData name="PC_CIE">2</SimpleData>
+                        <SimpleData name="EM_GRPT">2</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.482122501769855,48.840862360964067</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">CHPY</SimpleData>
+                        <SimpleData name="DENO_CS">CHAMPIGNY</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">15</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 48 81 55 45</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 81 03 97</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 150</SimpleData>
+                        <SimpleData name="ADRESSE">16 rue de Dunkerque 94500 Champigny/Marne</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.531643033983713,48.808489861226768</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">STMR</SimpleData>
+                        <SimpleData name="DENO_CS">SAINT-MAUR</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">23</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 48 83 87 46</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 83 14 39</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 230</SimpleData>
+                        <SimpleData name="ADRESSE">17 ave Louis Blanc 94100 Saint-Maur</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.502809038920373,48.797037971569793</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">JOIN</SimpleData>
+                        <SimpleData name="DENO_CS">JOINVILLE</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">17</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 48 83 34 90</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 83 25 40</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 171</SimpleData>
+                        <SimpleData name="ADRESSE">16 rue de Paris 94340 Joinville-le-Pont</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.465812844690278,48.81860533071378</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">MALF</SimpleData>
+                        <SimpleData name="DENO_CS">MAISON-ALFORT</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">17</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 43 78 32 04</SimpleData>
+                        <SimpleData name="TEL_FEU">01 43 78 28 10</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 172</SimpleData>
+                        <SimpleData name="ADRESSE">4-6 rue Pasteur 94700 Maisons-Alfort</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.430344019293032,48.800292442232227</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">CRET</SimpleData>
+                        <SimpleData name="DENO_CS">CRETEIL</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">17</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 49 80 28 17</SimpleData>
+                        <SimpleData name="TEL_FEU">01 49 80 28 18</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 170</SimpleData>
+                        <SimpleData name="ADRESSE">10-18 rue de l'Orme St-Simon 94000  Crteil</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.458824669214229,48.786478181455664</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">VIJF</SimpleData>
+                        <SimpleData name="DENO_CS">VILLEJUIF</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">22</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 47 26 18 19</SimpleData>
+                        <SimpleData name="TEL_FEU">01 47 26 39 60</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 222</SimpleData>
+                        <SimpleData name="ADRESSE">46-48 ave de Verdun 94800 Villejuif</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.353382013815399,48.791906872799458</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">RUNG</SimpleData>
+                        <SimpleData name="DENO_CS">RUNGIS</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">22</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 46 86 90 10</SimpleData>
+                        <SimpleData name="TEL_FEU">01 47 26 90 20</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 220</SimpleData>
+                        <SimpleData name="ADRESSE">382 ave de Stalingrad 94669 Chevilly-Larue</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.367577983007259,48.76004158998731</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">CHOI</SimpleData>
+                        <SimpleData name="DENO_CS">CHOISY-LE-ROI</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">22</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 48 52 33 40</SimpleData>
+                        <SimpleData name="TEL_FEU">01 48 84 09 47</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 221</SimpleData>
+                        <SimpleData name="ADRESSE">56-58 rue Jules Vals 94600 Choisy-le-Roi</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.41047016690969,48.754329286920175</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">VISG</SimpleData>
+                        <SimpleData name="DENO_CS">VILLENEUVE-ST-GEORGES</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">17</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 43 89 03 91</SimpleData>
+                        <SimpleData name="TEL_FEU">01 43 89 02 49</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 173</SimpleData>
+                        <SimpleData name="ADRESSE">97 ave Anatole France 94190 Villeneuve-St-Georges</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.452877323973643,48.745351967354601</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">VILC</SimpleData>
+                        <SimpleData name="DENO_CS">VILLECRESNES</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">23</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 98 90 33</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 99 08 74</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 232</SimpleData>
+                        <SimpleData name="ADRESSE">69 rue des Mandres 94440 Villecresnes</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.540234317995557,48.711974217783364</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">CCHY</SimpleData>
+                        <SimpleData name="DENO_CS">CLICHY</SimpleData>
+                        <SimpleData name="GRPT">1</SimpleData>
+                        <SimpleData name="CIE">9</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 47 37 14 74</SimpleData>
+                        <SimpleData name="TEL_FEU">01 47 37 11 30</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 092</SimpleData>
+                        <SimpleData name="ADRESSE">137 Bld Jean-Jaures 92110 Clichy sur Seine</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.301635756742556,48.906186869583195</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">SUCY</SimpleData>
+                        <SimpleData name="DENO_CS">SUCY-EN-BRIE</SimpleData>
+                        <SimpleData name="GRPT">2</SimpleData>
+                        <SimpleData name="CIE">23</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 45 90 11 40</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 90 21 32</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 231</SimpleData>
+                        <SimpleData name="ADRESSE">48 Route de la Queue en Brie 94370 SUCY EN BRIE</SimpleData>
+                        <SimpleData name="PC_CIE">0</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.535367225582973,48.762174558246421</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">PUTX</SimpleData>
+                        <SimpleData name="DENO_CS">PUTEAUX</SimpleData>
+                        <SimpleData name="GRPT">3</SimpleData>
+                        <SimpleData name="CIE">28</SimpleData>
+                        <SimpleData name="TEL_VILLE">01 58 47 29 28</SimpleData>
+                        <SimpleData name="TEL_FEU">01 45 06 01 20</SimpleData>
+                        <SimpleData name="TEL_AUTO">35 280</SimpleData>
+                        <SimpleData name="ADRESSE">106 rue de Verdun 92800 Puteaux</SimpleData>
+                        <SimpleData name="PC_CIE">1</SimpleData>
+                        <SimpleData name="EM_GRPT">0</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.234894045708356,48.877534125201088</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <ExtendedData>
+                    <SchemaData schemaUrl="#Bspp">
+                        <SimpleData name="CS">0</SimpleData>
+                        <SimpleData name="DENO_CS"></SimpleData>
+                        <SimpleData name="GRPT">0</SimpleData>
+                        <SimpleData name="CIE">0</SimpleData>
+                        <SimpleData name="TEL_VILLE"></SimpleData>
+                        <SimpleData name="TEL_FEU"></SimpleData>
+                        <SimpleData name="TEL_AUTO"></SimpleData>
+                        <SimpleData name="ADRESSE"></SimpleData>
+                        <SimpleData name="PC_CIE"></SimpleData>
+                        <SimpleData name="EM_GRPT"></SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <styleUrl>#bspp</styleUrl>
+                <Point>
+                    <coordinates>2.38969548304495,48.787613619608848</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+    </Document>
+</kml>

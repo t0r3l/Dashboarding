@@ -1,0 +1,119 @@
+
+source: https://www.youtube.com/watch?v=8RPfrhzRw2s
+
+I Geometrie types:
+
+1 Points:
+
+contains an array of coordinates
+x and y
+
+"coordinates":[-108.5, 33.7]
+
+coordinates[0] = longitude
+
+coordinates[1] = latitude
+
+
+2 MultiPoints:
+
+An array containing multiple arrays of coordinates for points objects
+
+"coordinates":[[-108.5, 33.7], [-18.5, 33.9], [-208.5, 37.7]]
+
+coordinates[1][0] = longitude of second coordinates
+
+coordinates[0][1] = coordinates[0,1] latitude of first coordinates
+
+
+3 LineString:
+
+An array of arrays for a single line's edges
+
+"coordinates":[[-108.5, 33.7], [-18.5, 33.9], [-208.5, 37.7]]
+
+
+4 MultiLineString:
+
+An array of arrays of arrays for mutiple lines edges
+
+
+"coordinates":[[[-708.5, 83.7], [-187.5, 3.9], [-208.5, 34.1]],
+               [[-158.5, 373.7], [-189.5, 383.9], [-408.5, 67.7]],
+	       [[-104.5, 353.7], [-128.5, 73.9], [-209.5, 377.7]]]
+
+
+4 Polygon
+
+An array of arrays of arrays for mutiple lines edges.
+Each first coordinate of an array must join last coordinates of the array.
+First array of array is an outer array while the second one must be inside the 
+first one (eg: a lac on an island)
+
+"coordinates":[[[-108.5, 33.7], [-108.6, 33.2], [-108.5, 33.5], [-108.5, 33.7]]
+               [[-108.5, 33.7], [-18.4, 33.5], [-18.2, 33.2], [-108.5, 33.7]]
+
+
+
+5 MultyPolygon:
+
+An array of arrays of arrays of arrays for mutiple Polygones.
+
+Second array contains polygons, third outer and/or polygones.
+
+
+ "coordinates":[[[[-108.5, 33.7], [-108.6, 33.2], [-108.5, 33.5], [-108.5, 33.7]], [[-108.5, 33.7], [-18.4, 33.5], [-18.2, 33.2], [-108.5, 33.7]]],
+[[-108.5, 33.7], [-18.4, 33.5], [-18.2, 33.2], [-108.5, 33.7]]]]
+
+
+II: Features
+
+
+1 feature:
+
+Feature type contains a single geom objet characteristics
+
+{"type""feature",
+"geometry":{"type":"Point",
+            "coordinates":[-108.5, 33.7]
+
+},
+"properties":{"species":"Bald Eagle",
+              "sex":"male",
+              "age":7
+}
+}
+
+
+2 featureCollection:
+
+Contains mutliple features of geom objects,
+features don't have to be structured the same 
+way in a collection.
+
+{"type":"featureCollection",
+"features":[{"type":"feature",
+"geometry":{"type":"Point",
+            "coordinates":[-108.5, 33.7]
+},
+"properties":{"species":"Bald Eagle",
+              "sex":"male",
+              "age":7
+}
+}, {"type":"feature",
+"geometry":{"type":"feature",
+            "geometry":{"type":"Points",
+            "coordinates":[-109.1, 32.5]
+            },
+           "properties":{"species":"Golden Eagle"},
+           "sex":"female", 
+           "age":2
+}
+}]
+}
+
+
+
+
+
+

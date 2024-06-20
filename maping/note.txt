@@ -1,0 +1,1 @@
+Pour afficher les bonnes icones sur la carte, il faut editer le fichier kml concerné et remplacer l'url ( en absolu ) de l'image par l'url ( en absolu ) de l'image courante SUR le serveur courant. 
