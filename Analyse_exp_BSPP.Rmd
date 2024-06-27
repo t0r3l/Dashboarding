@@ -435,7 +435,7 @@ min(BSPP2$duree_engin_min)
 Sauvegarde du jeu de donné traité
 
 ```{r}
-write.csv(BSPP2, file = "C:/Users/morel/Documents/Library/CodingTime/R/BSPP/BSPP2.CSV")
+write.csv(BSPP2, file = "Path/BSPP2.CSV")
 ```
 
 
@@ -671,7 +671,7 @@ leaflet() %>%
 Importation du jeu de données traité
 
 ```{r}
-BSPP2 = read.csv("C:/Users/morel/Documents/Library/CodingTime/R/BSPP/BSPP2.CSV")
+BSPP2 = read.csv("PATH/BSPP2.CSV")
 ```
 
 
