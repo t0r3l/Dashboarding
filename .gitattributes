@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Ignore documentation files
+docs/** linguist-documentation
+
+#Mark RMarkDown as an R file
+*rmd linguist-language=R
