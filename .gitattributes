@@ -5,4 +5,4 @@
 docs/** linguist-documentation
 
 #Mark RMarkDown as an R file
-*rmd linguist-language=R
+*.Rmd linguist-language=R
